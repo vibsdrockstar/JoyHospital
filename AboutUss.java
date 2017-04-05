@@ -13,9 +13,18 @@ public class AboutUs extends AppCompatActivity {
         setContentView(R.layout.activity_about_us);
     }
     public void OpenInfo(View view) {
+        switch (view.getId()){
+            case R.id.patient:
+                startActivity(new Intent(this, Info.class));
+                break;
+            case R.id.doctors:
+                startActivity(new Intent(this, Doctors.class));
+                break;
+            case R.id.b_pay:
+                startActivity(new Intent(this, Patients.class));
+                break;
 
-
-        startActivity(new Intent(this, Info.class));
+        }
     }
 
 }
