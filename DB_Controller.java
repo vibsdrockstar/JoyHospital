@@ -19,7 +19,7 @@ public class DB_Controller extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-      db.execSQL("CREATE TABLE PATIENTS( ID INTEGER PRIMARY KEY AUTOINCREMENT,FIRSTNAME TEXT UNIQUE,LASTNAME TEXT);" );
+      db.execSQL("CREATE TABLE PATIENTS( ID INTEGER PRIMARY KEY AUTOINCREMENT,FIRSTNAME TEXT, LASTNAME TEXT, AGE TEXT, CITY TEXT);" );
     }
 
     @Override
@@ -28,10 +28,12 @@ public class DB_Controller extends SQLiteOpenHelper {
         onCreate(db);
 
     }
-    public void  insert_patient(String firstname,String lastname){
+    public void  insert_patient(String firstname,String lastname,String age,String city){
         ContentValues contentValues = new ContentValues();
         contentValues.put("FIRSTNAME",firstname);
         contentValues.put("LASTNAME",lastname);
+        contentValues.put("AGE",age);
+        contentValues.put("CITY",city);
         this.getWritableDatabase().insertOrThrow("PATIENTS","",contentValues);
     }
     public void delete_patient(String firstname){
@@ -44,7 +46,7 @@ public class DB_Controller extends SQLiteOpenHelper {
         Cursor cursor = this.getReadableDatabase().rawQuery("SELECT * FROM PATIENTS",null);
         textView.setText("");
         while (cursor.moveToNext()){
-            textView.append(cursor.getString(1)+" "+cursor.getString(2)+"\n");
+            textView.append("Firstname : "+cursor.getString(1)+" Lastname : "+cursor.getString(2)+" Age : "+cursor.getString(3)+" City : "+cursor.getString(4)+"\n");
         }
     }
 }
