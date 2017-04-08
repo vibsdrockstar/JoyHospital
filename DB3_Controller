@@ -1,0 +1,43 @@
+package com.example.vibhor.hospitalmanagementsystem;
+
+import android.content.ContentValues;
+import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.TextView;
+
+/**
+ * Created by vibhor on 4/8/2017.
+ */
+public class DB3_Controller extends SQLiteOpenHelper {
+    public DB3_Controller(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
+        super(context,"HOSPITAL.db3",factory,version);
+}
+@Override
+public void obCreate(SQLiteDatabase db3) {
+    db3.execSQL("CREATE TABLE EPIDEMIC(ID PRIMARY KEY AUTOINCREMENT ,PATIENT NAME TEXT,EPIDEMIC TEXT,CURE TEXT,FEE TEXT,STATUS TEXT);");
+
+}
+@Override
+public void onUpgrade(SQLiteDatabase db3, int oldVersion,int newVersion) {
+    db3.execSQL("DROP TABLE IF EXISTS EPIDEMIC");
+    onCreate(db3);
+}
+public void insert_info(String patientname,String epidemic,String cure,String fees,String status) {
+    ContentValues contentValues = new ContentValues();
+    contentValues.put("PATIENT NAME", patientname);
+    contentValues.put("EPIDEMIC", epidemic);
+    contentValues.put("CURE", cure);
+    contentValues.put("FEES", fees);
+    contentValues.put("STATUS", status);
+    this.getWritableDatabase().insertOrThrow("INFO", "", contentValues);
+}
+    public void list_all_info(TextView textView){
+        Cursor cursor = this.getReadableDatabase().rawQuery("SELECT * FROM DOCTORS",null);
+        textView.setText("");
+        while (cursor.moveToNext()){
+            textView.append(" Patientname"+cursor.getString(1)+"Epidemic"+cursor.getString(2)+"Cure "+cursor.getString(3)+"Fee"+cursor.getString(4)+"Status"+cursor.getString(5)+"\n");
+        }
+}
+}
