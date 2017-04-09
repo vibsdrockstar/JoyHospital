@@ -8,4 +8,6 @@ An android app showing the functionality of hospital using Android SQLite Librar
 ![patient profile](https://cloud.githubusercontent.com/assets/18600300/24686103/4c49c960-19cf-11e7-93a6-375a166a6caf.jpg)
 ![payment](https://cloud.githubusercontent.com/assets/18600300/24686110/53eb0a76-19cf-11e7-889d-00a27326c01d.jpg)
 ![welcome](https://cloud.githubusercontent.com/assets/18600300/24686117/5b9ac7b6-19cf-11e7-90e9-b83b8a87db0d.jpg)
+![docinfo](https://cloud.githubusercontent.com/assets/18600300/24833906/7c0b6f00-1cf4-11e7-8a18-d20980393c10.jpg)
+![paytm](https://cloud.githubusercontent.com/assets/18600300/24833911/82e919f8-1cf4-11e7-8280-6e3bfdd1566b.jpg)
 
