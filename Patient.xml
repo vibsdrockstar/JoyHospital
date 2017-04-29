@@ -17,32 +17,49 @@
         android:orientation="vertical">
 
         <EditText
+            android:textColor="#ffffff"
+            android:textColorHint="#f5f5f5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/editText4"
+            android:id="@+id/et_pname"
             android:hint="Patient Name" />
 
         <EditText
+            android:textColor="#ffffff"
+            android:textColorHint="#f5f5f5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Epidemic"
-            android:id="@+id/editText5" />
+            android:id="@+id/et_epi" />
 
         <EditText
+            android:textColor="#ffffff"
+            android:textColorHint="#f5f5f5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textMultiLine"
             android:ems="10"
-            android:hint="Cure &amp; Fee"
-            android:id="@+id/editText6"/>
+            android:hint="Cure"
+            android:id="@+id/et_cure"/>
 
         <EditText
+            android:textColor="#ffffff"
+            android:textColorHint="#f5f5f5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:hint="Fees"
+            android:id="@+id/et_pay"/>
+        <EditText
+            android:textColor="#ffffff"
+            android:textColorHint="#f5f5f5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textMultiLine"
             android:ems="10"
             android:hint="Payment Status"
-            android:id="@+id/editText7" />
+            android:id="@+id/et_paystatus" />
 
         <LinearLayout
             android:layout_marginTop="10dp"
@@ -52,22 +69,28 @@
             <Button
                 android:id="@+id/add_button"
                 android:text="Add"
+                android:onClick="btn_click"
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/delete_button"
-                android:text="Delete"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content" />
+
             <Button
                 android:id="@+id/show_button"
                 android:text="SHOW"
+                android:onClick="btn_click"
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content" />
 
         </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Large Text"
+            android:textColor="#ffffff"
+            android:id="@+id/tv_large"
+            android:layout_below="@+id/show_button"
+            android:layout_centerHorizontal="true" />
     </LinearLayout>
 </ScrollView>
