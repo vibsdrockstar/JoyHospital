@@ -8,101 +8,96 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.vibhor.hospitalmanagementsystem.Info">
+    tools:context="com.example.vibhor.hospitalmanagementsystem.Doctors">
 
-   <ScrollView
-       android:layout_width="match_parent"
-       android:layout_height="match_parent">
-       <RelativeLayout
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content">
-           <EditText
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:id="@+id/et_f"
-               android:inputType="textPersonName"
-               android:layout_alignParentTop="true"
-               android:layout_alignParentStart="true"
-               android:layout_alignParentEnd="true"
-               android:hint="Firstname" />
 
-           <EditText
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:id="@+id/et_l"
-               android:hint="Lastname"
-               android:inputType="textPersonName"
-               android:layout_below="@+id/et_f"
-               android:layout_alignParentStart="true"
-               android:layout_alignParentEnd="true" />
-           <EditText
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:id="@+id/age"
-               android:hint="Age"
-               android:inputType="number"
-               android:maxLength="3"
-               android:layout_below="@+id/et_l"
-               android:layout_alignParentStart="true"
-               android:layout_alignParentEnd="true" />
-           <EditText
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:id="@+id/et_city"
-               android:hint="City"
-               android:inputType="textPostalAddress"
-               android:layout_below="@+id/age"
-               android:layout_alignParentStart="true"
-               android:layout_alignParentEnd="true" />
-           <Button
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:text="ADD PATIENT"
-               android:id="@+id/b_add"
-               android:onClick="btn_click"
-               android:layout_below="@+id/et_city"
-               android:layout_alignParentStart="true"
-               android:layout_alignParentEnd="true" />
+    <EditText
+        android:textColor="#ffffff"
+        android:textColorHint="#f5f5f5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_f"
+        android:inputType="textPersonName"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:hint="Firstname" />
 
-           <Button
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:text="DELETE PATIENT"
-               android:id="@+id/b_delete"
-               android:onClick="btn_click"
-               android:layout_below="@+id/b_add"
-               android:layout_alignParentStart="true"
-               android:layout_alignParentEnd="true" />
+    <EditText
+        android:textColor="#ffffff"
+        android:textColorHint="#f5f5f5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_l"
+        android:hint="Lastname"
+        android:inputType="textPersonName"
+        android:layout_below="@+id/et_f"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+    <EditText
+        android:textColor="#ffffff"
+        android:textColorHint="#f5f5f5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/age"
+        android:hint="Age"
+        android:inputType="number"
+        android:maxLength="2"
+        android:layout_below="@+id/et_l"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+    <EditText
+        android:textColor="#ffffff"
+        android:textColorHint="#f5f5f5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_speci"
+        android:hint="Specialisation"
+        android:inputType="text"
+        android:layout_below="@+id/age"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
 
-           <Button
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:text="UPDATE PATIENT"
-               android:id="@+id/b_update"
-               android:onClick="btn_click"
-               android:layout_below="@+id/b_delete"
-               android:layout_alignParentStart="true"
-               android:layout_alignParentEnd="true" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ADD"
+        android:id="@+id/b_add"
+        android:onClick="btn_click"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
 
-           <Button
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:text="LIST PATIENTS"
-               android:id="@+id/b_list"
-               android:onClick="btn_click"
-               android:layout_below="@+id/b_update"
-               android:layout_alignParentStart="true"
-               android:layout_alignParentEnd="true" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DELETE"
+        android:id="@+id/b_del"
+        android:onClick="btn_click"
+        android:layout_alignTop="@+id/b_add"
+        android:layout_centerHorizontal="true" />
 
-           <TextView
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:textAppearance="?android:attr/textAppearanceLarge"
-               android:text="Large Text"
-               android:id="@+id/textView2"
-               android:layout_below="@+id/b_list"
-               android:layout_centerHorizontal="true" />
-       </RelativeLayout>
-   </ScrollView>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LIST"
+        android:id="@+id/b_list"
+        android:onClick="btn_click"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/b_list"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
+
+
+
+
+
+
+
