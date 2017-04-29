@@ -12,6 +12,8 @@
 
 
     <EditText
+        android:textColor="#ffffff"
+        android:textColorHint="#f5f5f5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/et_f"
@@ -22,6 +24,8 @@
         android:hint="Firstname" />
 
     <EditText
+        android:textColor="#ffffff"
+        android:textColorHint="#f5f5f5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/et_l"
@@ -31,6 +35,8 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true" />
     <EditText
+        android:textColor="#ffffff"
+        android:textColorHint="#f5f5f5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/age"
@@ -41,11 +47,13 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true" />
     <EditText
+        android:textColor="#ffffff"
+        android:textColorHint="#f5f5f5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/et_speci"
         android:hint="Specialisation"
-        android:inputType="textPostalAddress"
+        android:inputType="text"
         android:layout_below="@+id/age"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true" />
@@ -55,6 +63,7 @@
         android:layout_height="wrap_content"
         android:text="ADD"
         android:id="@+id/b_add"
+        android:onClick="btn_click"
         android:layout_centerVertical="true"
         android:layout_alignParentStart="true" />
 
@@ -63,6 +72,7 @@
         android:layout_height="wrap_content"
         android:text="DELETE"
         android:id="@+id/b_del"
+        android:onClick="btn_click"
         android:layout_alignTop="@+id/b_add"
         android:layout_centerHorizontal="true" />
 
@@ -71,6 +81,7 @@
         android:layout_height="wrap_content"
         android:text="LIST"
         android:id="@+id/b_list"
+        android:onClick="btn_click"
         android:layout_centerVertical="true"
         android:layout_alignParentEnd="true" />
     <TextView
