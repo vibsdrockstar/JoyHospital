@@ -8,10 +8,14 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Doctors extends AppCompatActivity {
-    EditText firstname,lastname,age,specialisation;
+    EditText firstname,lastname,age,field;
     TextView textView;
     DB2_Controller controller;
+    List<String> specialisation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,21 +24,37 @@ public class Doctors extends AppCompatActivity {
         firstname = (EditText) findViewById(R.id.et_f);
         lastname = (EditText) findViewById(R.id.et_l);
         age = (EditText) findViewById(R.id.age);
-        specialisation = (EditText) findViewById(R.id.et_speci);
+        field= (EditText) findViewById(R.id.et_speci);
         textView = (TextView)findViewById(R.id.textView2);
         controller = new DB2_Controller(this,"",null,1);
+    }
+
+    private void initField(){
+        specialisation= new ArrayList<>();
+        specialisation.add("cardiologist");
+        specialisation.add("pediatrician");
+        specialisation.add("opthalmologist");
+        specialisation.add("oncologist");
+        //add all desired specialisation
     }
     private void emptyEditTexts() {
         firstname.setText(null);
         lastname.setText(null);
         age.setText(null);
-        specialisation.setText(null);
+        field.setText(null);
+    }
+    private boolean isValidSpecialisation(){
+        if(field.getText().toString().isEmpty() || !specialisation.contains(field.getText().toString().toLowerCase()))
+            return false;
+        return true;
     }
     public void btn_click(View view) {
         switch (view.getId()) {
             case R.id.b_add:
                 try {
-                    controller.insert_doctor(firstname.getText().toString(), lastname.getText().toString(), age.getText().toString(), specialisation.getText().toString());
+                    if (!isValidSpecialisation())
+                        return;
+                    controller.insert_doctor(firstname.getText().toString(), lastname.getText().toString(), age.getText().toString(), field.getText().toString());
                     Toast.makeText(this, "Doctor added successfully!", Toast.LENGTH_SHORT).show();
                     emptyEditTexts();
                 } catch (SQLiteException e) {
