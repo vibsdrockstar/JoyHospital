@@ -17,7 +17,7 @@ public class DB2_Controller extends SQLiteOpenHelper {
     }
     @Override
     public void obCreate(SQLiteDatabase db2) {
-        db2.execSQL("CREATE TABLE DOCTORS(ID PRIMARY KEY AUTOINCREMENT ,FIRSTNAME TEXT,LASTNAME TEXT,AGE TEXT,SPECIALISATION TEXT);");
+        db2.execSQL("CREATE TABLE DOCTORS(ID  INTEGER PRIMARY KEY AUTOINCREMENT ,FIRSTNAME TEXT,LASTNAME TEXT,AGE TEXT,SPECIALISATION TEXT);");
     }
     @Override
     public void onUpgrade(SQLiteDatabase db2, int oldVersion,int newVersion) {
