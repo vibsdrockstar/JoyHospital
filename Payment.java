@@ -34,6 +34,7 @@ public class Patients extends AppCompatActivity {
     private void initDisease(){
         disease=new ArrayList<>();
         disease.add("cough");
+        disease.add("dengue");
         disease.add("eyeflu");
         disease.add("cancer");
         disease.add("catract");
@@ -44,6 +45,7 @@ public class Patients extends AppCompatActivity {
     private void  initTreatment(){
         treatment=new ArrayList<>() ;
         treatment.add("honitus");
+        treatment.add("juice");
         treatment.add("eyedrops");
         treatment.add("chemotheraphy");
         treatment.add("surgery");
