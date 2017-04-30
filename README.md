@@ -4,3 +4,4 @@ An android app to show how a hospial works using Android SQLite Library
 ![patientdes](https://cloud.githubusercontent.com/assets/18600300/25564995/b2ada93a-2ddc-11e7-963e-7a30e13bb1ba.jpg)
 ![dotorsinfo](https://cloud.githubusercontent.com/assets/18600300/25564996/bc090d76-2ddc-11e7-8066-7d4dd8fe21e7.jpg)
 ![pay](https://cloud.githubusercontent.com/assets/18600300/25564999/cd1df0cc-2ddc-11e7-9c5c-97f2cb1b8f99.jpg)
+![patientdes2](https://cloud.githubusercontent.com/assets/18600300/25565080/36ad3eb6-2dde-11e7-9134-cca38f614785.jpg)
