@@ -35,6 +35,7 @@ public class Doctors extends AppCompatActivity {
         specialisation.add("pediatrician");
         specialisation.add("opthalmologist");
         specialisation.add("oncologist");
+        specialisation.add("orthopedician");
         //add all desired specialisation
     }
     private void emptyEditTexts() {
