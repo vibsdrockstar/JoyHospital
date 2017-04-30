@@ -17,6 +17,7 @@ public class Patients extends AppCompatActivity {
     DB3_Controller controller;
     List<String> disease;
     List<String> treatment;
+    List<String> say;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +53,11 @@ public class Patients extends AppCompatActivity {
         treatment.add("openheartsurgery");
         //add relevant treatment
     }
+    private void initSay(){
+    poll=new ArrayList<>();
+    poll.add("YES");
+    poll.add("NO");
+     }
 
     private void emptyEditTexts() {
         patientname.setText(null);
@@ -70,6 +76,11 @@ public class Patients extends AppCompatActivity {
             return false;
         return true;
     }
+    private boolean isValidSay(){
+     if(status.getText().toString().isEmpty() || !say.contains(status.getText().toString().toUpperCase()))
+         return false;
+        return true;
+    }
     public void btn_click(View view) {
         switch (view.getId()) {
             case R.id.b_add:
@@ -77,6 +88,8 @@ public class Patients extends AppCompatActivity {
                     if (!isValidDisease())
                         return;
                     if (!isValidTreatment())
+                        return;
+                    if(!isValidSay())
                         return;
                     controller.insert_info(patientname.getText().toString(), epidemic.getText().toString(), cure.getText().toString(), fee.getText().toString(), status.getText().toString());
                     Toast.makeText(this, "Information added successfully!", Toast.LENGTH_SHORT).show();
