@@ -9,7 +9,12 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.vibhor.hospitalmanagementsystem.Doctors">
-
+ <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
 
     <EditText
         android:textColor="#ffffff"
@@ -92,6 +97,8 @@
         android:id="@+id/textView2"
         android:layout_below="@+id/b_list"
         android:layout_centerHorizontal="true" />
+ </RelativeLayout>
+   </ScrollView>
 
 </RelativeLayout>
 
